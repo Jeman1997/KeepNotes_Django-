@@ -1,0 +1,47 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Keep Notes</title>
+    <link rel="stylesheet" href="{%static 'notes.css'%}?{%now 'U'%}">
+  </head>
+  <body>
+    <div class="upside">
+      <h3>Keep Notes</h3>
+    </div>
+
+
+    <div class="middle">
+      <div class="middleup">
+        <form class="mainform" action="add/" method="post">
+          {%csrf_token%}
+          <input type="text" name="title"  placeholder="Title">
+          <textarea name="content" rows="8" cols="80" placeholder="Content"></textarea>
+          <input class='noteadd' type="submit" value="Add Note">
+        </form>
+      </div>
+      <div class="notecontainer">
+        {%for x in mynotes%}
+        <div class="eachnote">
+
+          <form class="mainform" action="update/{{x.id}}" method="post">
+            {%csrf_token%}
+            <input type="text" name="titlech" value="{{x.title}}" placeholder="Title">
+            <textarea rows="8" name='contentch' cols="80" placeholder="Content">{{x.content}}</textarea>
+            <button class="butn-d" type="submit" name="button">Update</button>
+          </form>
+          <button class='butn' type="button" name="button"><a href="delete/{{x.id}}">Delete</a></button>
+
+        </div>
+        {%endfor%}
+      </div>
+
+    </div>
+
+    <div class="down">
+      <footer>©-2021-DJANGO APP BY JEMAN N</footer>
+    </div>
+
+  </body>
+</html>

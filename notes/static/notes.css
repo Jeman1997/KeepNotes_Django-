@@ -1,0 +1,97 @@
+body{
+  width:100vw;
+  height:100vh;
+  margin:0;
+  background-color: #FFE69A;
+}
+h3{
+  margin-top: 0;
+  color:black;
+  line-height: 40px;
+}
+.upside{
+  background-color: #92B4EC;
+}
+.mainform{
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+
+}
+.noteadd{
+  background-color: #3BACB6;
+}
+.middleup{
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  margin-top: 40px;
+  margin-bottom: 50px;
+
+}
+input,textarea,button{
+  width:250px;
+}
+a,a:hover,a:focus,a:active{
+  text-decoration: none;
+  display: inline-block;
+  color: black;
+}
+textarea,input{
+overflow:scroll;
+outline:none;
+-webkit-box-shadow:none;
+-moz-box-shadow:none;
+box-shadow:none;
+resize:none;
+border-style: solid;
+border-width: 1px;
+border-radius: 15px;
+margin-bottom: 15px;
+font-size: 15px;
+background-color: #FFFFFF;
+box-shadow: 3px 3px 5px grey ;
+padding: 5px 5px 5px 10px;
+}
+input{
+  height: 30px;
+  font-size: 17px;
+}
+.eachnote{
+  width: auto;
+  height:auto;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  margin-left: 20px;
+}
+.down{
+  position:absolute;
+  bottom:0;
+
+}
+.butn{
+  display: flex;
+  width:250px;
+  justify-content: center;
+  background-color:#FF4949;
+  padding: 5px 5px 5px 5px;
+}
+.butn-d{
+  background-color: #3BACB6;
+}
+.notecontainer{
+  width:100vw;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+button{
+  border:none;
+  margin:0 0 10px 0;
+  height: 25px;
+  border-radius: 15px;
+  font-size: 15px;
+  text-align: center;
+}
